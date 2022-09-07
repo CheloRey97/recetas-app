@@ -10,12 +10,13 @@ import MapKit
 
 struct ShowMapButton: View {
     @StateObject private var mapAPI = MapAPI()
-    var address = ""
-    var title: String
+    var city: String? = ""
+    var country: String? = ""
+    var recipeName: String
     
     var body: some View {
-        NavigationLink(destination: MapView(mapAPI: mapAPI, location: self.address, title: self.title).onAppear() {
-            self.mapAPI.getLocation(address: self.address, delta: 0.5)
+        NavigationLink(destination: MapView(mapAPI: mapAPI, city: self.city!, country: self.country!, recipeName: self.recipeName).onAppear() {
+            self.mapAPI.getLocation(address: "\(self.city!) \(self.country!)", delta: 0.5)
         }){
             Label("Ver en mapa", systemImage: "map.circle")
                 .padding(.horizontal, 10)
@@ -31,6 +32,6 @@ struct ShowMapButton: View {
 
 struct ShowMapButton_Previews: PreviewProvider {
     static var previews: some View {
-        ShowMapButton(address: "Chile", title: "Lasagna")
+        ShowMapButton(city: "Valdivia", country: "Chile", recipeName: "Lasagna")
     }
 }

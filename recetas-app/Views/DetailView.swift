@@ -18,9 +18,9 @@ struct RecetaView: View {
                 Title(title: receta.name)
                 HStack{
                     FlagPortrait(flag: receta.flag, size: 35)
-                    RecipeTitleInfo(category: receta.category!, origin: receta.country!)
+                    RecipeTitleInfo(category: receta.category!, origin: "\(receta.country!), \(receta.city!)")
                     Spacer()
-                    ShowMapButton(address: receta.country!, title: receta.name)
+                    ShowMapButton(city: receta.city, country: receta.country, recipeName: receta.name)
                 }
                 Divider()
                 Subtitle(subtitle: "Ingredientes:")
