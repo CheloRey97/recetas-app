@@ -20,7 +20,7 @@ struct RecetaView: View {
                     FlagPortrait(flag: receta.flag, size: 35)
                     RecipeTitleInfo(category: receta.category!, origin: receta.country!)
                     Spacer()
-                    ShowMapButton()
+                    ShowMapButton(address: receta.country!, title: receta.name)
                 }
                 Divider()
                 Subtitle(subtitle: "Ingredientes:")

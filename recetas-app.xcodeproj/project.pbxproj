@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C1AE1D928C8390900C8568E /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AE1D828C8390900C8568E /* MapModel.swift */; };
+		9C1AE1DB28C83DCC00C8568E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1AE1DA28C83DCC00C8568E /* MapView.swift */; };
 		9C35FD8028C81767001E1923 /* AllRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C35FD7F28C81767001E1923 /* AllRecipesView.swift */; };
 		9C71CC5F28C459CF003D57B9 /* ShowMapButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C71CC5E28C459CF003D57B9 /* ShowMapButtonComponent.swift */; };
 		9C71CC6128C45B60003D57B9 /* RecipeTitleInfoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C71CC6028C45B60003D57B9 /* RecipeTitleInfoComponent.swift */; };
@@ -46,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C1AE1D828C8390900C8568E /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		9C1AE1DA28C83DCC00C8568E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		9C1AE1DC28C8414B00C8568E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9C35FD7F28C81767001E1923 /* AllRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRecipesView.swift; sourceTree = "<group>"; };
 		9C71CC5E28C459CF003D57B9 /* ShowMapButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMapButtonComponent.swift; sourceTree = "<group>"; };
 		9C71CC6028C45B60003D57B9 /* RecipeTitleInfoComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTitleInfoComponent.swift; sourceTree = "<group>"; };
@@ -118,6 +123,7 @@
 		9CB0B9FE28C3C40900317155 /* recetas-app */ = {
 			isa = PBXGroup;
 			children = (
+				9C1AE1DC28C8414B00C8568E /* Info.plist */,
 				9CB0B9FF28C3C40900317155 /* recetas_appApp.swift */,
 				9CB0BA2F28C3D60D00317155 /* Views */,
 				9CB0BA2C28C3D18D00317155 /* Components */,
@@ -158,6 +164,7 @@
 			children = (
 				9CB0BA2A28C3CEC400317155 /* RecipeModel.swift */,
 				9CB0BA3228C4451F00317155 /* TextFormatModel.swift */,
+				9C1AE1D828C8390900C8568E /* MapModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 				9C35FD7F28C81767001E1923 /* AllRecipesView.swift */,
 				9CB0BA3028C3EC2200317155 /* DetailView.swift */,
 				9CE1629C28C80A7400058854 /* SearchView.swift */,
+				9C1AE1DA28C83DCC00C8568E /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -342,6 +350,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CE1629D28C80A7400058854 /* SearchView.swift in Sources */,
+				9C1AE1DB28C83DCC00C8568E /* MapView.swift in Sources */,
+				9C1AE1D928C8390900C8568E /* MapModel.swift in Sources */,
 				9CB0BA2B28C3CEC400317155 /* RecipeModel.swift in Sources */,
 				9CBA108628C6B8CE00C2A757 /* ImageBannerComponent.swift in Sources */,
 				9CB0BA2E28C3D1C500317155 /* RecipeCardComponent.swift in Sources */,
@@ -516,6 +526,7 @@
 				DEVELOPMENT_TEAM = QJ5G5F74FZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "recetas-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -545,6 +556,7 @@
 				DEVELOPMENT_TEAM = QJ5G5F74FZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "recetas-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

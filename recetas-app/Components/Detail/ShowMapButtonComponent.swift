@@ -6,11 +6,18 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ShowMapButton: View {
+    @StateObject private var mapAPI = MapAPI()
+    var address = ""
+    var title: String
+    
     var body: some View {
-        Button(action: showInMap) {
-            Text("Mostrar en mapa")
+        NavigationLink(destination: MapView(mapAPI: mapAPI, location: self.address, title: self.title).onAppear() {
+            self.mapAPI.getLocation(address: self.address, delta: 0.5)
+        }){
+            Label("Ver en mapa", systemImage: "map.circle")
                 .padding(.horizontal, 10)
                 .padding(.vertical, 5)
                 .font(.custom("Arial", size: 13))
@@ -24,6 +31,6 @@ struct ShowMapButton: View {
 
 struct ShowMapButton_Previews: PreviewProvider {
     static var previews: some View {
-        ShowMapButton()
+        ShowMapButton(address: "Chile", title: "Lasagna")
     }
 }
