@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ImageBanner: View {
-    let receta: Receta;
+    let receta: Recipe;
     
     //Obtiene la posición del scroll
     private func getScrollOffset(_ geometry: GeometryProxy) -> CGFloat {
@@ -65,6 +65,6 @@ struct ImageBanner: View {
 
 struct ImageBanner_Previews: PreviewProvider {
     static var previews: some View {
-        ImageBanner(receta: listaRecetas[0])
+        ImageBanner(receta: recipeList[0])
     }
 }

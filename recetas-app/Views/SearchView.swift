@@ -11,28 +11,26 @@ struct Search: View {
     @StateObject var oo = SearchObservableObject()
     @State private var searchTerm = ""
     
+    var listRecipe: [Recipe] {
+        if (searchTerm.isEmpty){
+            return oo.data
+        } else {
+            return oo.searchResults
+        }
+    }
+    
     var body: some View {
         NavigationView{
-            VStack{
-                Title(title: "Encuentra recetas")
-                Text("Comienza a buscar tus recetas favoritas, ya sea por nombre o ingredientes.")
-                    .multilineTextAlignment(.center)
-                ForEach(oo.searchResults) { recipe in
-                    NavigationLink(destination: RecetaView(receta: recipe)){
-                        RecipeRow(recipe: recipe)
-                    }
+            List(listRecipe) { recipe in
+                NavigationLink(destination: DetailView(recipe: recipe)){
+                    RecipeRow(recipe: recipe)
                 }
             }
-            .padding()
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .foregroundColor(.gray)
             .navigationTitle("Búsqueda")
+            .animation(.default, value: searchTerm)
         }
-        .searchable(text: $searchTerm, prompt: "Buscar recetas"){
-            ForEach(oo.searchResults) { recipe in
-                RecipeRow(recipe: recipe)
-            }
-        }
+        .searchable(text: $searchTerm, placement: .navigationBarDrawer(displayMode: .always), prompt: "Buscar recetas")
+        
         .onChange(of: searchTerm) { searchTerm in
             oo.searchResults = oo.data.filter({ recipe in
                 recipe.name.lowercased().contains(searchTerm.lowercased()) ||

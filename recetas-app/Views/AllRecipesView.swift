@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct AllRecipesView: View {
-    var columnas = [GridItem(.adaptive(minimum: 150), spacing: 30)]
+    var columnas = [GridItem(.adaptive(minimum: 160), spacing: 30)]
     
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: columnas, spacing: 20) {
-                    ForEach(listaRecetas, id: \.id ) {
+                LazyVGrid(columns: columnas, spacing: 30) {
+                    ForEach(recipeList, id: \.id ) {
                         receta in RecetaCard(receta: receta)
                     }
                 }

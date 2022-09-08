@@ -28,6 +28,7 @@
 		9CE1629D28C80A7400058854 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1629C28C80A7400058854 /* SearchView.swift */; };
 		9CE162A028C80C2F00058854 /* SearchObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1629F28C80C2F00058854 /* SearchObservableObject.swift */; };
 		9CE162A228C80ED500058854 /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE162A128C80ED500058854 /* RecipeRow.swift */; };
+		9CEFB13128C98CC1000E0BE1 /* BtnBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEFB13028C98CC1000E0BE1 /* BtnBack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		9CE1629C28C80A7400058854 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		9CE1629F28C80C2F00058854 /* SearchObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchObservableObject.swift; sourceTree = "<group>"; };
 		9CE162A128C80ED500058854 /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
+		9CEFB13028C98CC1000E0BE1 /* BtnBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnBack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				9CB0B9FF28C3C40900317155 /* recetas_appApp.swift */,
 				9CB0BA2F28C3D60D00317155 /* Views */,
 				9CB0BA2C28C3D18D00317155 /* Components */,
+				9CEFB13028C98CC1000E0BE1 /* BtnBack.swift */,
 				9CB0BA2928C3CC3600317155 /* Models */,
 				9CB0BA0328C3C40B00317155 /* Assets.xcassets */,
 				9CB0BA0528C3C40B00317155 /* Preview Content */,
@@ -361,6 +364,7 @@
 				9C71CC6328C46052003D57B9 /* FlagPortraitComponent.swift in Sources */,
 				9CB0BA3328C4451F00317155 /* TextFormatModel.swift in Sources */,
 				9CB0BA0028C3C40900317155 /* recetas_appApp.swift in Sources */,
+				9CEFB13128C98CC1000E0BE1 /* BtnBack.swift in Sources */,
 				9CE162A028C80C2F00058854 /* SearchObservableObject.swift in Sources */,
 				9C71CC6128C45B60003D57B9 /* RecipeTitleInfoComponent.swift in Sources */,
 				9CE162A228C80ED500058854 /* RecipeRow.swift in Sources */,

@@ -9,11 +9,11 @@
 import Combine
 
 class SearchObservableObject: ObservableObject {
-    var data: [Receta] = []
-    @Published var searchResults: [Receta] = []
+    @Published var data: [Recipe] = []
+    @Published var searchResults: [Recipe] = []
     
     init() {
-        data = listaRecetas
+        data = recipeList
     }
 }
 

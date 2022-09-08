@@ -7,26 +7,25 @@
 
 import SwiftUI
 
-struct RecetaView: View {
-    let receta: Receta
+struct DetailView: View {
+    let recipe: Recipe
 
     var body: some View {
         ScrollView {
-            ImageBanner(receta: receta)
-            
+            ImageBanner(receta: recipe)
             VStack(alignment: .leading, spacing: 10) {
-                Title(title: receta.name)
+                Title(title: recipe.name)
                 HStack{
-                    FlagPortrait(flag: receta.flag, size: 35)
-                    RecipeTitleInfo(category: receta.category!, origin: "\(receta.country!), \(receta.city!)")
+                    FlagPortrait(flag: recipe.flag, size: 35)
+                    RecipeTitleInfo(category: recipe.category!, origin: "\(recipe.country!), \(recipe.city!)")
                     Spacer()
-                    ShowMapButton(city: receta.city, country: receta.country, recipeName: receta.name)
+                    ShowMapButton(city: recipe.city, country: recipe.country, recipeName: recipe.name)
                 }
                 Divider()
                 Subtitle(subtitle: "Ingredientes:")
                 VStack(alignment: .leading, spacing: 5) {
-                    if(receta.ingredients.count > 0){
-                        ForEach(receta.ingredients, id: \.self){ ingrediente in
+                    if(recipe.ingredients.count > 0){
+                        ForEach(recipe.ingredients, id: \.self){ ingrediente in
                             Text("- \(ingrediente)")
                                 .padding(.leading, 20)
                                 .font(.custom("Arial", size: 15))
@@ -40,15 +39,16 @@ struct RecetaView: View {
                 }
                 Divider()
                 Subtitle(subtitle: "Preparación:")
-                Description(text: receta.description!)
+                Description(text: recipe.description!)
             }.padding()
         }
-        .edgesIgnoringSafeArea(.all)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BtnBack())
     }
 }
 
 struct RecetaView_Previews: PreviewProvider {
     static var previews: some View {
-        RecetaView(receta: listaRecetas[0])
+        DetailView(recipe: recipeList[0])
     }
 }
