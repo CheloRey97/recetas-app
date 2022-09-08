@@ -23,7 +23,7 @@ struct BtnBack: View {
             .foregroundColor(.white)
             .padding(8)
             .background(Color.black.opacity(0.85))
-            .cornerRadius(20)
+            .cornerRadius(30)
         }
     }
 }

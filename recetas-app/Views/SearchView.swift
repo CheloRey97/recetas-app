@@ -29,7 +29,7 @@ struct Search: View {
             .navigationTitle("Búsqueda")
             .animation(.default, value: searchTerm)
         }
-        .searchable(text: $searchTerm, placement: .navigationBarDrawer(displayMode: .always), prompt: "Buscar recetas")
+        .searchable(text: $searchTerm, placement: .navigationBarDrawer(displayMode: .always), prompt: "Busca recetas por nombre o ingredientes")
         
         .onChange(of: searchTerm) { searchTerm in
             oo.searchResults = oo.data.filter({ recipe in
