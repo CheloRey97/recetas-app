@@ -11,26 +11,28 @@ struct RecipeRow: View {
     var recipe: Receta
     
     var body: some View {
-        HStack {
-            Image(recipe.imagen)
-                .resizable()
-                .scaledToFit()
-                .cornerRadius(10)
-                .frame(width: 80, height: 80)
-            VStack(alignment: .leading, spacing: 4) {
-                Text(recipe.name)
-                    .font(.title2.weight(.semibold))
-                Group {
-                    Text(recipe.category!)
-                    Text(recipe.country!)
+        NavigationLink (destination: RecetaView(receta: recipe)) {
+            HStack {
+                Image(recipe.imagen)
+                    .resizable()
+                    .scaledToFit()
+                    .cornerRadius(10)
+                    .frame(width: 80, height: 80)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(recipe.name)
+                        .font(.title2.weight(.semibold))
+                    Group {
+                        Text(recipe.category!)
+                        Text(recipe.country!)
+                    }
+                    .foregroundColor(.gray)
                 }
-                .foregroundColor(.gray)
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .foregroundColor(.gray)
             }
-            Spacer()
-            Image(systemName: "chevron.right")
-                .foregroundColor(.gray)
+            .padding(.vertical, 4)
         }
-        .padding(.vertical, 4)
     }
 }
 

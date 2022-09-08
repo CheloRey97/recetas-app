@@ -17,6 +17,11 @@ struct Search: View {
                 Title(title: "Encuentra recetas")
                 Text("Comienza a buscar tus recetas favoritas, ya sea por nombre o ingredientes.")
                     .multilineTextAlignment(.center)
+                ForEach(oo.searchResults) { recipe in
+                    NavigationLink(destination: RecetaView(receta: recipe)){
+                        RecipeRow(recipe: recipe)
+                    }
+                }
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
