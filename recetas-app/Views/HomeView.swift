@@ -17,8 +17,12 @@ struct ContentView: View {
             Search()
                 .tabItem {
                     Label("Buscar", systemImage: "magnifyingglass.circle")
-                }
+                }.accessibilityLabel("searchTab")
         }
+        
+        
+        
+        
     }
 }
 
