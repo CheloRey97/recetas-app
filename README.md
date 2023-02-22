@@ -1,2 +1,2 @@
 # recetas-app
-Proyecto realizado en Swift
+Proyecto realizado con SwiftUI
